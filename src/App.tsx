@@ -1,16 +1,17 @@
-import React from 'react';
-import HomePage from './page/home';
+import { useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-import { UserProvider } from './provider/users';
+import { HomePage } from './page/home';
 
-const App: React.FC = () => {
+function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <>
-      <UserProvider>
-        <HomePage />
-      </UserProvider>
-    </>
+    <div className='App'>
+      <HomePage />
+    </div>
   );
-};
+}
 
 export default App;

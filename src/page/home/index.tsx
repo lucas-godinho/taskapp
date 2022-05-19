@@ -2,10 +2,8 @@ import React from 'react';
 
 import { useUser } from '../../provider/users';
 
-const HomePage: React.FC = () => {
+export const HomePage = () => {
   const { users, loading } = useUser();
 
-  return <div>{loading && users?.map((item) => item.title)} teste</div>;
+  return <div>teste</div>;
 };
-
-export default HomePage;
