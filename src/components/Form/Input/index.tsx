@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-import * as S from "./style";
+import * as S from './style'
 
-const Input = () => {
-  return <S.Container>Input</S.Container>;
-};
+const Input: React.FC = () => {
+  return <S.Container>Input</S.Container>
+}
 
-export default Input;
+export default Input

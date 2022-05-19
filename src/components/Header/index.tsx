@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-import * as S from "./style";
+import * as S from './style'
 
-const Header = () => {
-  return <S.Container>Header</S.Container>;
-};
+const Header: React.FC = () => {
+  return <S.Container>Header</S.Container>
+}
 
-export default Header;
+export default Header
