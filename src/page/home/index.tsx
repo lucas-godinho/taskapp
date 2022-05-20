@@ -1,9 +1,16 @@
 import React from 'react';
 
-import { useUser } from '../../provider/users';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-export const HomePage = () => {
-  const { users, loading } = useUser();
+import * as S from './style';
 
-  return <div>teste</div>;
+export const HomePage: React.FC = () => {
+  return (
+    <S.Container>
+      <Header />
+      <S.Content>teste</S.Content>
+      <Footer />
+    </S.Container>
+  );
 };

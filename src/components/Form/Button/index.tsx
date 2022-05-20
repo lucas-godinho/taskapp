@@ -1,7 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const Button: React.FC = () => {
-  return <div>Button</div>
+import * as S from './style';
+
+interface ButtonProps {
+  children: React.ReactNode | React.ReactNode[];
+  isDark?: boolean;
+  onClick?: () => void;
 }
 
-export default Button
+export const ButtonTheme: React.FC<ButtonProps> = ({ children, isDark, onClick }) => {
+  return (
+    <S.Container isDark={isDark} onClick={onClick}>
+      {children}
+      {isDark ? <S.IconLight /> : <S.IconDark />}
+    </S.Container>
+  );
+};

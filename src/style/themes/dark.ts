@@ -3,17 +3,20 @@ const Dark = {
   name: 'Dark',
 
   // Primary:
-  primary: '#05F282',
+  primary: '#9580FF',
+  secondary: '#ffffff',
+  tertiary: '#8AFF80',
 
   // Text:
-  textPrimary: '#FEFEFE',
+  textPrimary: '#F8F8F2',
   textSecondary: '#969696',
 
   // Border:
-  borderLine: '#F1F0F540',
+  borderLine: '#9580FF40',
 
   // Background:
-  background: '#14151A',
+  background: '#22212C',
+  backgroundContras: '#F8F8F2',
 };
 
 export default Dark;

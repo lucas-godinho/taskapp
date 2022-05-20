@@ -7,6 +7,8 @@ declare module 'styled-components' {
 
     // Primary:
     primary: string;
+    secondary: string;
+    tertiary: string;
 
     // Text:
     textPrimary: string;
@@ -17,5 +19,6 @@ declare module 'styled-components' {
 
     // Background:
     background: string;
+    backgroundContras: string;
   }
 }

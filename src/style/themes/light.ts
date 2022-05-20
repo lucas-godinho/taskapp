@@ -2,18 +2,21 @@ const Light = {
   // The theme name:
   name: 'Light',
 
-  // Primary:
-  primary: '#05F282',
+  // colors:
+  primary: '#8AFF80',
+  secondary: '#8AFF80',
+  tertiary: '#9580FF',
 
   // Text:
-  textPrimary: '#FEFEFE',
+  textPrimary: '#14151A',
   textSecondary: '#969696',
 
   // Border:
   borderLine: '#F1F0F540',
 
   // Background:
-  background: '#14151A',
+  background: '#FEFEFE',
+  backgroundContras: '#FEFEFE',
 };
 
 export default Light;

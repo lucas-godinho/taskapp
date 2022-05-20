@@ -1,9 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-import * as S from './style'
+import { useCore } from '../../provider/Core';
+
+import { ButtonTheme } from '../Form/Button';
+
+import * as S from './style';
 
 const Header: React.FC = () => {
-  return <S.Container>Header</S.Container>
-}
+  const { toggleTheme, isDark, users } = useCore();
 
-export default Header
+  return (
+    <S.Container>
+      <S.Logo>TaskApp</S.Logo>
+      <ButtonTheme isDark={isDark} onClick={() => toggleTheme()}>
+        {isDark ? 'Light' : 'Dark'}
+      </ButtonTheme>
+    </S.Container>
+  );
+};
+
+export default Header;
