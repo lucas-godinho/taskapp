@@ -40,10 +40,16 @@ const ListTask = () => {
   return (
     <S.Container>
       <S.FormAddTask>
-        <input type='text' name='title' onChange={handleGetInput} value={title} />
-        <button type='button' onClick={handleAddTodo}>
-          teste
-        </button>
+        <S.InputAddTask
+          type='text'
+          name='title'
+          placeholder='Nova tarefa'
+          onChange={handleGetInput}
+          value={title}
+        />
+        <S.ButtonaddTask type='button' onClick={handleAddTodo}>
+          <S.IconDiffAdded />
+        </S.ButtonaddTask>
       </S.FormAddTask>
       {TaskList}
     </S.Container>
