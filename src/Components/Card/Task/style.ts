@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { pxToRem } from '../../../style/global';
 
-import { Edit } from '@styled-icons/fa-regular/';
+import { Check2 } from '@styled-icons/bootstrap/';
 
 export const Container = styled.div`
   min-width: 100%;
@@ -28,7 +28,7 @@ export const Container = styled.div`
   }
 `;
 
-export const IconEdit = styled(Edit)`
+export const IconEdit = styled(Check2)`
   width: ${pxToRem(20)};
   height: ${pxToRem(20)};
 `;
@@ -37,7 +37,7 @@ export const ButtonEdit = styled.button`
   width: ${pxToRem(30)};
   height: ${pxToRem(30)};
 
-  color: ${(props) => props.theme.textPrimary};
+  color: ${(props) => props.theme.background};
 
   background: transparent;
   border: none;
@@ -49,6 +49,6 @@ export const ButtonEdit = styled.button`
   transform: 0.3s;
 
   &:hover {
-    color: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.textPrimary};
   }
 `;

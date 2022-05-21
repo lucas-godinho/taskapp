@@ -37,6 +37,7 @@ export interface CoreContextProps {
   activeUser: UserProps | null;
   setActiveUser: React.Dispatch<React.SetStateAction<UserProps | null>>;
   tasks: TaskProps[] | any;
+  setTasks: React.Dispatch<React.SetStateAction<TaskProps[] | any>>;
   activeTask: TaskProps | null;
   setActiveTask: React.Dispatch<React.SetStateAction<TaskProps | null>>;
   createTaskUserById: (task: TaskProps) => Promise<void>;

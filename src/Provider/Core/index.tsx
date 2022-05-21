@@ -59,12 +59,13 @@ const CoreProvider: React.FC<ReactProps> = (props) => {
   const createTaskUserById = useCallback(
     async (data: TaskProps) => {
       try {
-        const response = await api.post(`/user/${activeUser?.id}/todos`, {
+        const response = {
           userId: activeUser?.id,
+          id: tasks.length + 1,
           title: data.title,
           completed: false,
-        });
-        setTasks([...tasks, response.data]);
+        };
+        setTasks([response, ...tasks]);
       } catch (error) {
         throw error;
       }
@@ -93,6 +94,7 @@ const CoreProvider: React.FC<ReactProps> = (props) => {
         activeUser,
         setActiveUser,
         tasks,
+        setTasks,
         activeTask,
         setActiveTask,
         createTaskUserById,
