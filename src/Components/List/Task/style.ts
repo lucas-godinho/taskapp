@@ -9,12 +9,11 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
 `;
 
-export const FormAddTask = styled.form`
+export const FormAddTask = styled.div`
   width: 100%;
   height: ${pxToRem(50)};
 
@@ -31,6 +30,11 @@ export const InputAddTask = styled.input`
   background: transparent;
   border: 1px solid ${(props) => props.theme.borderLine};
   border-radius: 0.4rem;
+
+  color: ${(props) => props.theme.textPrimary};
+
+  padding-left: ${pxToRem(10)};
+  font-size: ${pxToRem(12)};
 
   &::placeholder {
     padding-left: ${pxToRem(10)};

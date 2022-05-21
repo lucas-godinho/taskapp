@@ -17,6 +17,9 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font-family: 'Source Sans Pro', sans-serif;
   }
+  *:focus {
+    outline: none;
+  }
 `;
 
 export const ContainerApp = styled.div`

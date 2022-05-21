@@ -5,7 +5,6 @@ import { TaskProps } from '../../../Provider/Core/type';
 
 import * as S from './style';
 import CardTask from '../../Card/Task';
-import { useForm } from 'react-hook-form';
 
 const ListTask = () => {
   const { tasks, activeUser, setTasks } = useCore();

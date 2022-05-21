@@ -56,22 +56,33 @@ const CoreProvider: React.FC<ReactProps> = (props) => {
     }
   }, []);
 
-  const createTaskUserById = useCallback(
-    async (data: TaskProps) => {
-      try {
-        const response = {
-          userId: activeUser?.id,
-          id: tasks.length + 1,
-          title: data.title,
-          completed: false,
+  const createTaskUserById = (data: TaskProps) => {
+    const response = {
+      userId: activeUser?.id,
+      id: tasks.length + 1,
+      title: data.title,
+      completed: false,
+    };
+    setTasks([response, ...tasks]);
+  };
+
+  const updateTaskUser = (id: string) => {
+    const task = tasks.map((task) => {
+      if (task.id === Number(id)) {
+        const newTask = {
+          id: task.id,
+          title: task.title,
+          userId: task.userId,
+          completed: true,
         };
-        setTasks([response, ...tasks]);
-      } catch (error) {
-        throw error;
+
+        return newTask;
+      } else {
+        return task;
       }
-    },
-    [activeUser],
-  );
+    });
+    setTasks([...task]);
+  };
 
   useEffect(() => {
     const { '@TaskApp.Theme': cookieTheme } = parseCookies();
@@ -97,6 +108,7 @@ const CoreProvider: React.FC<ReactProps> = (props) => {
         setTasks,
         activeTask,
         setActiveTask,
+        updateTaskUser,
         createTaskUserById,
       }}
       {...props}
