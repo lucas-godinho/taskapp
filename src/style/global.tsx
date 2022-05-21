@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 
 export const pxToRem = (value: number) => {
@@ -16,4 +17,12 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font-family: 'Source Sans Pro', sans-serif;
   }
+`;
+
+export const ContainerApp = styled.div`
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 `;

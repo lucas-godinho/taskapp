@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useCore } from '../../provider/Core';
+import { useCore } from '../../Provider/Core';
 
 import { ButtonTheme } from '../Form/Button';
 
@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
   return (
     <S.Container>
-      <S.Logo>TaskApp</S.Logo>
+      <S.Logo to={'/'}>TaskApp</S.Logo>
       <ButtonTheme isDark={isDark} onClick={() => toggleTheme()}>
         {isDark ? 'Light' : 'Dark'}
       </ButtonTheme>

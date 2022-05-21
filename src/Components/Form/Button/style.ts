@@ -36,4 +36,6 @@ export const Container = styled.button<ButtonProps>`
   text-transform: capitalize;
   font-weight: 600;
   font-size: 0.9rem;
+
+  cursor: pointer;
 `;
